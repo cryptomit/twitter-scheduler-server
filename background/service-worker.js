@@ -182,8 +182,7 @@ class TwitterRepostService {
     try {
       // Check if using API server
       const useApiServer = true;
-      // TODO: Update this URL after deploying to your new Railway instance
-      const apiUrl = 'YOUR_NEW_RAILWAY_URL_HERE'; // e.g., 'https://your-new-app.up.railway.app'
+      const apiUrl = 'https://twitter-scheduler-server-production-8314.up.railway.app';
       
       if (useApiServer) {
         // Get the draft
@@ -306,8 +305,7 @@ class TwitterRepostService {
       
       // Use API server for posting
       const useApiServer = true;
-      // TODO: Update this URL after deploying to your new Railway instance
-      const apiUrl = 'YOUR_NEW_RAILWAY_URL_HERE'; // e.g., 'https://your-new-app.up.railway.app'
+      const apiUrl = 'https://twitter-scheduler-server-production-8314.up.railway.app';
       
       let result;
       let aiParaphrased = false;
@@ -400,8 +398,7 @@ class TwitterRepostService {
     
     // Check if API server is configured
     const useApiServer = true; // Set to true when server is deployed
-    // TODO: Update this URL after deploying to your new Railway instance
-    const apiUrl = 'YOUR_NEW_RAILWAY_URL_HERE'; // e.g., 'https://your-new-app.up.railway.app'
+    const apiUrl = 'https://twitter-scheduler-server-production-8314.up.railway.app';
     
     if (useApiServer) {
       return await this.postViaApiServer(draft, apiUrl);

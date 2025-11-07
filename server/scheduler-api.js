@@ -935,8 +935,7 @@ app.get('/api/twitter-status', async (req, res) => {
 });
 
 // Keep-alive ping every 5 minutes to prevent Railway sleeping
-// TODO: Update this URL after deploying to your new Railway instance
-const RAILWAY_URL = process.env.RAILWAY_PUBLIC_DOMAIN || 'YOUR_NEW_RAILWAY_URL_HERE';
+const RAILWAY_URL = process.env.RAILWAY_PUBLIC_DOMAIN || 'https://twitter-scheduler-server-production-8314.up.railway.app';
 cron.schedule('*/5 * * * *', async () => {
   console.log('💓 Keep-alive ping to prevent Railway sleeping...');
   try {
