@@ -1,4 +1,5 @@
-const API_URL = 'https://twitter-scheduler-server-production-e94d.up.railway.app';
+// TODO: Update this URL after deploying to your new Railway instance
+const API_URL = 'YOUR_NEW_RAILWAY_URL_HERE'; // e.g., 'https://your-new-app.up.railway.app'
 let currentDate = new Date();
 let scheduledTweets = [];
 let currentView = 'calendar';

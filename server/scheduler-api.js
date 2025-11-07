@@ -13,10 +13,10 @@ app.use(cors());
 
 // Your Twitter OAuth 1.0a credentials
 const twitterClient = new TwitterApi({
-  appKey: 'h0DFiZqwW6d63KW4X00V8Mujm',
-  appSecret: 'SgSekvocr4xvCC7ebJJgd4U3Qamhqull7yzIY4byyRjxABRtEF',
-  accessToken: '881167228456099840-V1RYGdRz7Ek94jHLKOKKR550qT8W90Z',
-  accessSecret: 'AIGisNXuvAuInueKMIo00rvHZxMKJLfAzWvGJP09wCseY'
+  appKey: 'Gw1L36NdnowNm0OU2EqV1xqr9ByYE9VhYtgVJgnmFCBVkyiU6v',
+  appSecret: 'd35lIhmBAmJTKcYKaYXw0VX3O8CHYOIeiNipDpsouFUya',
+  accessToken: '1537440474696339456-WxABin2NgC6l3nrcNH3PEAKnpCV0NB',
+  accessSecret: 'd35lIhmBAmJTKcYKaYXw0VX3O8CHYOIeiNipDpsouFUya'
 });
 
 // Initialize AI Paraphraser
@@ -935,10 +935,13 @@ app.get('/api/twitter-status', async (req, res) => {
 });
 
 // Keep-alive ping every 5 minutes to prevent Railway sleeping
+// TODO: Update this URL after deploying to your new Railway instance
+const RAILWAY_URL = process.env.RAILWAY_PUBLIC_DOMAIN || 'YOUR_NEW_RAILWAY_URL_HERE';
 cron.schedule('*/5 * * * *', async () => {
   console.log('💓 Keep-alive ping to prevent Railway sleeping...');
   try {
-    const response = await fetch('https://twitter-scheduler-server-production-e94d.up.railway.app/api/health');
+    const healthUrl = RAILWAY_URL.startsWith('http') ? `${RAILWAY_URL}/api/health` : `https://${RAILWAY_URL}/api/health`;
+    const response = await fetch(healthUrl);
     console.log('✅ Keep-alive successful');
   } catch (error) {
     console.log('⚠️ Keep-alive failed:', error.message);

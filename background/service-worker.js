@@ -182,7 +182,8 @@ class TwitterRepostService {
     try {
       // Check if using API server
       const useApiServer = true;
-      const apiUrl = 'https://twitter-scheduler-server-production-e94d.up.railway.app';
+      // TODO: Update this URL after deploying to your new Railway instance
+      const apiUrl = 'YOUR_NEW_RAILWAY_URL_HERE'; // e.g., 'https://your-new-app.up.railway.app'
       
       if (useApiServer) {
         // Get the draft
@@ -305,7 +306,8 @@ class TwitterRepostService {
       
       // Use API server for posting
       const useApiServer = true;
-      const apiUrl = 'https://twitter-scheduler-server-production-e94d.up.railway.app';
+      // TODO: Update this URL after deploying to your new Railway instance
+      const apiUrl = 'YOUR_NEW_RAILWAY_URL_HERE'; // e.g., 'https://your-new-app.up.railway.app'
       
       let result;
       let aiParaphrased = false;
@@ -378,10 +380,10 @@ class TwitterRepostService {
     try {
       // Hardcoded OAuth 1.0a credentials for real posting
       const credentials = {
-        apiKey: 'h0DFiZqwW6d63KW4X00V8Mujm',
-        apiSecret: 'SgSekvocr4xvCC7ebJJgd4U3Qamhqull7yzIY4byyRjxABRtEF',
-        accessToken: '881167228456099840-V1RYGdRz7Ek94jHLKOKKR550qT8W90Z',
-        accessTokenSecret: 'AIGisNXuvAuInueKMIo00rvHZxMKJLfAzWvGJP09wCseY'
+        apiKey: 'Gw1L36NdnowNm0OU2EqV1xqr9ByYE9VhYtgVJgnmFCBVkyiU6v',
+        apiSecret: 'd35lIhmBAmJTKcYKaYXw0VX3O8CHYOIeiNipDpsouFUya',
+        accessToken: '1537440474696339456-WxABin2NgC6l3nrcNH3PEAKnpCV0NB',
+        accessTokenSecret: 'd35lIhmBAmJTKcYKaYXw0VX3O8CHYOIeiNipDpsouFUya'
       };
       
       console.log('🐦 Using OAuth 1.0a credentials for real posting');
@@ -398,7 +400,8 @@ class TwitterRepostService {
     
     // Check if API server is configured
     const useApiServer = true; // Set to true when server is deployed
-    const apiUrl = 'https://twitter-scheduler-server-production-e94d.up.railway.app'; // Your Railway server!
+    // TODO: Update this URL after deploying to your new Railway instance
+    const apiUrl = 'YOUR_NEW_RAILWAY_URL_HERE'; // e.g., 'https://your-new-app.up.railway.app'
     
     if (useApiServer) {
       return await this.postViaApiServer(draft, apiUrl);
